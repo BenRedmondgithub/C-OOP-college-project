@@ -1,21 +1,43 @@
-﻿// This is my fist C# code
-// Hello Student
+﻿using System;
 
-using System; //system is a namespace
-
-class FirstProgram 
+class Employee 
 {
-    static void Main (string[] args) // entry point of the code
+
+    public string empID, empName, department, depNO;
+
+    public double salary;
+
+
+    public void showEmployeeData()
     {
 
-        int num1, num2, result;
-        num1 = 100;
-        num2 = 200;
-        result = num1 + num2;
-
-        Console.WriteLine("Number1 = "  +num1);
-        Console.WriteLine("Number2 = "  +num2);
-        Console.WriteLine("Addition = " +result);
+        Console.WriteLine("-----------------------------------------------------------");
+        Console.WriteLine("Emp ID: " +empID);
+        Console.WriteLine("Employee name: {0}" ,empName);
+        Console.WriteLine("Department: {0}" ,department);
+        Console.WriteLine("Dept No: {0}" ,depNO);
+        Console.WriteLine("Salary: {0}" ,salary);
+        Console.WriteLine("-----------------------------------------------------------");
 
     }
+}
+
+class Program 
+{
+static void Main(string [] agrs)
+
+{
+
+    Employee e1 = new Employee();
+
+    e1.empID = "H32651";
+    e1.empName = "James Smith";
+    e1.department ="IT";
+    e1.depNO = "02";
+    e1.salary = 25000;
+
+    e1.showEmployeeData();
+
+}
+
 }
